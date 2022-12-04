@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/static/css/modelo.css"/>
+        <link rel='shortcut icon' type='image/x-icon' href='/static/css/favicon/favicon.ico'/>
+        
+        <title>Sangue Voluntário</title>
+    </head>
+    <header>
+         <!-- Topo da página -->
+         <div class="topnav">
+            <a class="active" href="./home">Home</a>
+            <a href="./about">About</a>
+            <a href="./cadastro">Novo Cadastro</a>
+            <a href="#"  onclick="contrast()">Contrast</a>
+            <a href="#"  onclick="font_mais()">Font +</a>
+           </div>
+
+    </header>    
+<!-- Corpo da página -->
+    <body>
+       
+        <div id="principal">
+            <div class="acessibilidade">
+                <a class="titulo">
+                    SEJA BEM VINDO. 
+                </a>
+            <br>
+                <a class="subtitulo">
+                    AMIGO DOADOR.
+                </a>
+            <br>       
+                <a class="acesso">
+                    Login
+                </a>
+                <br>
+                <form action="/login"  method="post">
+                    <label> Número identificador: </label><br>
+                    <input type="text" name="numeroIdentificador" id="numeroIdentificador" /> 
+                    <label> Senha: </label> <br>
+                    <input type="password" name="senha" id="senha" /> <br>
+                    <button type="submit" onclick="acessar()"> Entrar </button>
+                </form>
+            <br>
+              
+            </div>
+        </div>
+
+        <script src="../script/acesse.js"></script>
+
+    </body>
+   
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/static/css/modelo.css" />
+        <link rel='shortcut icon' type='image/x-icon' href='/static/css/favicon/favicon.ico' />
+        
+        <title>Sangue Voluntário</title>
+    </head>
+    
+<body id="principal">
+    <!-- Topo da página -->
+<div class="topnav">
+    <a class="active" href="./home">Home</a>
+    <a href="./about">About</a>
+    <a href="./cadastro">Novo Cadastro</a>
+    <a href="#"  onclick="contrast()">Contrast</a>
+    <a href="#"  onclick="font_mais()">Font +</a>
+   </div>
+   <div class="image">
+    <img src="/static/css/aviso.jpg" style="width: 200px; height: 200px; padding-inline: 300px;">   
+
+   </div>
+    
+       
+    
+<br>
+<br>
+<h1> PÁGINA DE ERRO </h1>
+<br>
+<br>
+<div class="error">
+	<a class="titulo" > Resposta do Servidor:</h1>
+<br>
+<br>
+<%if(typeof error == "undefined"){%>
+	<%}else{%>
+<a class="titulo" ><%= error.message %></a>
+   <%}%>
+
+</div>
+
+
+
+<br>
+<br>
+<h1 id="hora"><script>document.write(new Date().toLocaleDateString())</script></h1>
+    <h1 id="hora"><script>document.write(new Date().toLocaleTimeString())</script></h1>
+       <footer><a href="/views/home.html">Home</a></footer>
+</body>
+</html>

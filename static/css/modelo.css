@@ -1,0 +1,233 @@
+@media  (max-width: 800px){
+    .box{
+        display: flex;
+        flex-direction: column;
+    }
+    .box1{
+        margin-top: 60px;
+    }
+}
+
+/** Geral **/
+html{
+    background-color: rgba(47, 185, 185, 0.705);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100%;
+    overflow-y: auto;
+}
+#pause{
+    /*background-image: url("/static/css/hemocentro.jpg");**/
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: aliceblue;
+    padding-left: auto;
+}
+/** Corpo **/
+h1{
+    color: rgb(224, 43, 11);
+}
+label{
+    display: inline;
+    color: black;
+}
+input{
+    display: block;
+}
+a{
+    color: yellow;
+}   
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    color: rgb(12, 89, 177);
+}
+
+/**div id começa-se com # **/
+#principal{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    justify-content: center;
+    color: white;
+    padding: 1% 0 0 2%;
+}
+#menu{
+    display: inline;
+    width: 200px;
+    height: 20px;
+    background-color: transparent;
+    color: cadetblue;
+    box-shadow: 0 6px 6 px rgba(0, 0, 0, 0, 6);
+    align-items: top;      
+}
+#cadastro{
+    display:block;
+    cursor: pointer;
+}
+#consulta{
+    width: 300px;
+    height: 100px;
+    display:inline;
+    
+}
+#btn-consultar{
+  display:inline;
+}
+#grafico{
+    width: 300px;
+    height: 300px;
+}
+
+/**classes começa-se com . **/
+
+.container {
+    width: 94vw;
+    height: 94vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.box {
+    background-color: rgb(234, 247, 247);
+    border-color: rgb(247, 5, 5);
+    border: 4px solid;
+    border-radius: 40px 40px 40px 40px;
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.box1 {
+    position: relative;
+    transition: .6s ease;
+    opacity: 1;
+    backface-visibility: hidden;
+    width: 32%;
+    height: 58vh;
+    background-image: url(../img_api/img1.png );
+    background-repeat: no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+}
+a.box-link{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+.box1:hover {
+    opacity: 0.48;
+    width: 32%;
+    height: 58vh;
+    background-image: url(../img_api/img1_hover.png );
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.box2 {
+    position: relative;
+    transition: .4s ease;
+    opacity: 1;
+    backface-visibility: hidden;
+    width: 32%;
+    height: 58vh;
+    background-image: url(../img_api/img2.png );
+    background-repeat: no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+}
+.box2:hover {
+    opacity: 0.48;
+    width: 32%;
+    height: 58vh;
+    background-image: url(../img_api/img2_hover.png );
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.box3 {
+    position: relative;
+    transition: .4s ease;
+    opacity: 1;
+    backface-visibility: hidden;
+    width: 32%;
+    height: 58vh;
+    background-image: url(../img_api/img3.png );
+    background-repeat: no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+}
+.box3:hover {
+    opacity: 0.48;
+    width: 32%;
+    height: 58vh;
+    background-image: url(../img_api/img3_hover.png );
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.box img {
+    max-width: 80%;
+    max-height: 80%;
+    width: auto;
+    height: auto;
+    z-index: 10;
+}
+.contrast{
+    background-image: url(./favicon/contrast.png);
+    background-size:30px;
+    background-color: beige;
+    background-repeat: no-repeat;
+    display:inline;
+    height: 30px;
+    width: 30px;
+        
+}
+   
+.text{
+    background-image: url(./favicon/text.png);
+    background-color: beige;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    display:inline;
+    height: 30px;
+    width: 30px;
+    
+}
+
+
+a.titulo{
+    font-family: Arial, Helvetica, sans-serif;  
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: aliceblue; 
+    padding-left: auto;  
+}
+a.subtitulo{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    color: aliceblue;
+    padding-left: auto;
+}
+a.acesso{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80%;
+    color: aliceblue;
+    padding-left: auto;
+    z-index: 1;
+}
+a.acesso2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    color: rgb(255, 230, 0);
+    padding-left: auto;
+    z-index: 1;
+}
+
+body {
+    margin: 2px;
+}
+
+

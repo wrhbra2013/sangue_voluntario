@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/modelo.css" />
+    <link rel='shortcut icon' type='image/x-icon' href='/static/css/favicon/favicon.ico' />
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<body>
+    <title>Sangue Voluntário</title>
+    </head>
+
+    <body id="pause">
+        <!-- Topo da página -->
+
+        <div class="topnav">
+            <a class="active" href="./home">Home</a>
+            <a href="./about">About</a>
+            <a href="./logout">Logout</a>
+            <a href="#" onclick="contrast()">Contrast</a>
+            <a href="#" onclick="font_mais()">Font +</a>
+        </div>
+
+
+
+        <div id="principal">
+            <div class="container">
+               
+                <div class="box">
+                    
+                    <!-- variaveis EJS-->
+                    <p >Doador nº <%-Numero %>
+                    </p>
+                    <script>
+                        function plot() {
+
+                            let d3 = Plotly.d3;
+                            let img_jpg = d3.select("#jpg-export");
+
+                            //Desenhando um gráfico
+
+                            let doacoes = {
+                                y: [recen, freq, monet, temp, scor],
+                                x: [fmtd],
+                                type: 'scatter'
+                            };
+                            let data = [doacoes];
+                            let layout = { title: "Historico de Doações",
+                                           showlegend: true
+                        };
+                            Plotly.plot("jpg-export", data, layout)
+
+                                // Formatando a imagem.
+
+                                .then(function (gd) {
+                                    Plotly.toImage(gd, { height: 300, width: 300 }).then(function (url) {
+                                        img_jpg.attr("src", url);
+                                        return Plotly.toImage(gd, { format: "jpeg", height: 400, width: 400 });
+                                    });
+                                });
+                        }
+
+                    </script>
+
+
+
+
+
+                    <form action="./informacoes" method="post" class="consulta">
+                        <img id="jpg-export" ></img>                       
+                        <textarea name="consulta" id="consulta"></textarea>
+                        <button type="submit" onclick="novaDoacao(),plot()">Nova Doação</button>
+                    </form>
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <script src="/script/informacoes.js"></script>
+    </body>
+
+</html>
