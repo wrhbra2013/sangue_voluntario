@@ -23,8 +23,9 @@ AUTENTICAR USUARIO ATUAL NO GIT HUB
 $ssh -T git@github.com
 
 
-CLONAR PASTA
+CLONAR PASTA (autenticação mais segura)git
 $git clone git@github.com:pasta_raiz/repositorio.git
+$git clone git@github.com:wrhbra2013/sangue_voluntario.git
 
 INICIALIZAR GIT
 $git init
